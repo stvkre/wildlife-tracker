@@ -2,11 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import org.sql2o.*;
 
-public class Animal {
+public class EndangeredAnimal {
   private String name;
+  private String health;
   private int id;
 
-  public Animal(String name, int animalId) {
+  public EndangeredAnimal(String name, String health, int animalId) {
   }
 
   // defining a save method

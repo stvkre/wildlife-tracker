@@ -9,16 +9,16 @@ public class AnimalTest {
 
   @Test
   public void monster_instantiatesCorrectly_true() {
-    Animal testAnimal = new Animal("Chewbacca", 1);
+    Animal testAnimal = new Animal("Bear", 1);
     assertEquals(true, testAnimal instanceof Animal);
   }
 
 // all method to return database entries
   @Test
   public void all_returnsAllInstancesOfAnimal_true() {
-    Animal firstAnimal = new Animal("Bear");
+    Animal firstAnimal = new Animal("Bear", 1);
     firstAnimal.save();
-    Animal secondAnimal = new Animal("Panda");
+    Animal secondAnimal = new Animal("Panda", 2);
     secondAnimal.save();
     assertEquals(true, Animal.all().get(0).equals(firstAnimal));
     assertEquals(true, Animal.all().get(1).equals(secondAnimal));
