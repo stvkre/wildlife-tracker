@@ -13,15 +13,10 @@ public class AnimalTest {
     assertEquals(true, testAnimal instanceof Animal);
   }
 
-// all method to return database entries
   @Test
-  public void all_returnsAllInstancesOfAnimal_true() {
-    Animal firstAnimal = new Animal("Bear", 1);
-    firstAnimal.save();
-    Animal secondAnimal = new Animal("Panda", 2);
-    secondAnimal.save();
-    assertEquals(true, Animal.all().get(0).equals(firstAnimal));
-    assertEquals(true, Animal.all().get(1).equals(secondAnimal));
+    public void save_insertsObjectIntoDatabase_Animal() {
+      Animal testAnimal = new Animal("name");
+      testAnimal.save();
+      assertTrue(Animal.all().get(0).equals(testAnimal));
+    }
   }
-
-}
