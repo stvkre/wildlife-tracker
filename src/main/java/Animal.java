@@ -3,6 +3,8 @@ import java.util.List;
 import org.sql2o.*;
 
 public class Animal {
+  private String name;
+  private int id;
 
   public Animal(String name, int animalId) {
   }
