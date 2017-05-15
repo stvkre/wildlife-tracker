@@ -6,8 +6,25 @@ public class EndangeredAnimal {
   private String name;
   private String health;
   private int id;
+  private String age;
 
-  public EndangeredAnimal(String name, String health, int animalId) {
+  public EndangeredAnimal(String name, String health, int animalId, int age) {
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getHealth() {
+    return health;
+  }
+
+  public int getAnimalId() {
+    return animalId;
+  }
+
+  public int getAge() {
+    return age;
   }
 
   // defining a save method
