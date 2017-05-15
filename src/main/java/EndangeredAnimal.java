@@ -28,12 +28,16 @@ public class EndangeredAnimal {
   }
 
   // defining a save method
-  public void save() {
+  @Override
+ public void save() {
    try(Connection con = DB.sql2o.open()) {
-     String sql = "INSERT INTO animals (name) VALUES (:name)";
-     con.createQuery(sql)
+     String sql = "INSERT INTO animals (name, health, age) VALUES (:name, :health, :age)";
+     this.id = (int) con.createQuery(sql, true)
        .addParameter("name", this.name)
-       .executeUpdate();
+       .addParameter("health", this.health)
+       .addParameter("age", this.age)
+       .executeUpdate()
+       .getKey();
    }
  }
 
