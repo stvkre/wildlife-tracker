@@ -28,8 +28,8 @@ public class App {
 // get information about animals from index.vtl
      get("/", (req, res) -> {
        Map<String, Object> model = new HashMap<>();
-       model.put("animals", Animal.allAnimals());
-       model.put("template", "templates/index/vtl");
+       //model.put("animals", Animal.all());
+       model.put("template", "templates/index.vtl");
        return new ModelAndView(model, layout);
      }, new VelocityTemplateEngine());
   }

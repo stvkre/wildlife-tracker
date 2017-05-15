@@ -19,7 +19,8 @@ public class Animal {
      String sql = "INSERT INTO animals (name) VALUES (:name)";
      con.createQuery(sql)
        .addParameter("name", this.name)
-       .executeUpdate();
+       .executeUpdate()
+       .getKey();
    }
  }
 
