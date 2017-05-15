@@ -9,6 +9,10 @@ public class Animal {
   public Animal(String name, int animalId) {
   }
 
+  public String getName() {
+    return name;
+  }
+
   // defining a save method
   public void save() {
    try(Connection con = DB.sql2o.open()) {
